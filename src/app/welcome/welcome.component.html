@@ -1,14 +1,16 @@
-<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" fxLayoutAlign="center center">
-  <section>
-    <h1>ACTIVITY</h1>
-    <p>Stay active and enjoy better health and more fun!</p>
-  </section>
-  <section>
-    <h1>COMMUNITY</h1>
-    <p>Get to know other people who share your passion!</p>
-  </section>
-  <section>
-      <h1>CHALLENGES</h1>
-      <p>Never stop! Give into new challenges every day!</p>
-    </section>
-</div>
+<section class="welcome">
+<h3>Recently Viewed</h3>
+<mat-card> 
+  <mat-card-title>The Krusty Krab</mat-card-title> <!--Would have something more like {{googleapi.restaurantname}} -->
+  <mat-card-content>
+    <h4>Description </h4>
+    <p>We're the knights of the round table, our toast is one of fables. We braid our hair, enjoy a good snar and dance like we're Clark Gable... <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantdescription}} -->
+    <h4>Reviews </h4>
+    <p>The Krusty Krab makes a mean soup, though their drinks can be a little salty. <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantreviews}} -->
+  </mat-card-content>
+  <mat-card-actions>
+    <button type="submit" mat-button [disabled]="f.invalid">Favorite</button>
+    <button type="submit" mat-button [disabled]="f.invalid">Un-mark as Visited</button>
+  </mat-card-actions>
+</mat-card>
+</section>

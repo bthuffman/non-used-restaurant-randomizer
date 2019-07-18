@@ -1,67 +1,18 @@
-<!-- Notice that Angular Material has a slightly different version for setting data tables up under their component's documentation -->
-<div fxLayoutAlign="center center">
-<mat-form-field fxFlex="40%">
-  <!-- The keyup is an event listener, using the doFilter that forwards what the user entered with $event (dom event) and pass on the value with target.value -->
-  <input matInput type="text" (keyup)="doFilter($event.target.value)">
-</mat-form-field>
-</div>
-<div fxLayoutAlign="center center">
-<table mat-table [dataSource]="dataSource" matSort fxFlex> 
-
-  <ng-container matColumnDef="date">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> 
-      Date
-    </th>
-    <td mat-cell *matCellDef="let element">
-      <!-- The pipe styles the date -->
-      {{ element.date | date }}
-    </td>
-  </ng-container>
-  
-  <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> 
-        Name
-      </th>
-      <td mat-cell *matCellDef="let element">
-        {{ element.name }}
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="calories">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> 
-          Calories
-        </th>
-        <td mat-cell *matCellDef="let element">
-          <!-- The pipe styles the number -->
-          {{ element.calories | number }}
-        </td>
-      </ng-container>
-
-      <ng-container matColumnDef="duration">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> 
-            Duration
-          </th>
-          <td mat-cell *matCellDef="let element">
-            {{ element.duration | number }}
-          </td>
-        </ng-container>
-
-        <ng-container matColumnDef="state">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> 
-              State
-            </th>
-            <td mat-cell *matCellDef="let element">
-              {{ element.state }}
-            </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-</table>
-</div>
-
-<mat-paginator [length]="100" [pageSize]="1" [pageSizeOptions]="[1, 5, 10, 20]" showFirstLastButtons></mat-paginator>
-
+<section class="past-training">
+<h3>Favorites</h3>
+<mat-card> 
+  <mat-card-title>The Krusty Krab</mat-card-title> <!--Would have something more like {{googleapi.restaurantname}} -->
+  <mat-card-content>
+    <h4>Description </h4>
+    <p>We're the knights of the round table, our toast is one of fables. We braid our hair, enjoy a good snar and dance like we're Clark Gable... <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantdescription}} -->
+    <h4>Reviews </h4>
+    <p>The Krusty Krab makes a mean soup, though their drinks can be a little salty. <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantreviews}} -->
+  </mat-card-content>
+  <mat-card-actions>
+    <button type="submit" mat-button [disabled]="f.invalid">Favorite</button>
+    <button type="submit" mat-button [disabled]="f.invalid">Un-mark as Visited</button>
+  </mat-card-actions>
+</mat-card>
+</section>
 
 
