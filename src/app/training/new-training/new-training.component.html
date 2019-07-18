@@ -1,0 +1,32 @@
+<!-- <section class="new-training"> -->
+  <!-- template driven approach to get the selected exercise to show up -->
+  <h1>Restaurant History</h1>
+  <h2>Previously Visited</h2>
+    <mat-card fxFlex="100%"> 
+      <mat-card-title fxLayoutAlign="left">Sagios</mat-card-title> <!--Would have something more like {{googleapi.restaurantname}} -->
+      <mat-card-content>
+        <h4>Description </h4>
+        <p>This Vietnamese restaurant prides itself on quality food and quality service... <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantdescription}} -->
+        <h4>Reviews </h4>
+        <p>Their pizza and burgers are delicious... Despite being a Vienamese restaurant... <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantreviews}} -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="submit" mat-button [disabled]="f.invalid">Favorite</button>
+        <button type="submit" mat-button [disabled]="f.invalid">Un-mark as Visited</button>
+      </mat-card-actions>
+    </mat-card>
+    <h2>Recently Viewed</h2>
+    <mat-card fxFlex="100%"> 
+      <mat-card-title fxLayoutAlign="left">The Krusty Krab</mat-card-title> <!--Would have something more like {{googleapi.restaurantname}} -->
+      <mat-card-content>
+        <h4>Description </h4>
+        <p>We're the knights of the round table, our toast is one of fables. We braid our hair, enjoy a good snar and dance like we're Clark Gable... <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantdescription}} -->
+        <h4>Reviews </h4>
+        <p>The Krusty Krab makes a mean soup, though their drinks can be a little salty. <strong><i><a>Click to read more</a></i></strong></p> <!--Would have something more like {{googleapi.restaurantreviews}} -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="submit" mat-button [disabled]="f.invalid">Favorite</button>
+        <button type="submit" mat-button [disabled]="f.invalid">Un-mark as Visited</button>
+      </mat-card-actions>
+    </mat-card>
+<!-- </section> -->
